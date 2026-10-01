@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сборки Проклятых Глубин</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=PT+Sans:wght@400;700&display=swap">
+<style>
+/* Single dark look, same world as the game: ember-gold on soot. One column of builds, the main one set apart. */
+:root{--bg:#141013;--panel:#1d171b;--line:#352a2f;--fg:#ece3d3;--dim:#a2968a;--gold:#d8a64a;--gold-ink:#1a1206;
+--display:"Cormorant SC",Georgia,serif;--body:"PT Sans",system-ui,sans-serif;color-scheme:dark}
+html{background:var(--bg)}
+body{min-height:100vh;background:radial-gradient(ellipse 120% 480px at 50% 0,#2a1d17,var(--bg)) var(--bg) no-repeat;color:var(--fg);font:16px/1.5 var(--body)}
+main{max-width:640px;margin:0 auto;padding:40px 16px 56px}
+header h1{font:700 clamp(30px,7vw,44px)/1.05 var(--display);color:var(--gold);margin:0;text-wrap:balance;letter-spacing:.01em}
+header p{color:var(--dim);margin:10px 0 0;max-width:60ch}
+ul{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
+.build{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.build.main{border-color:color-mix(in srgb,var(--gold) 55%,var(--line))}
+.meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;min-width:0}
+h2{font:700 22px/1.2 var(--display);margin:0;overflow-wrap:anywhere}
+.date{color:var(--dim);font-size:13px;font-variant-numeric:tabular-nums}
+.note{grid-column:1;margin:0;color:var(--fg);opacity:.85;min-width:0;overflow-wrap:anywhere}
+.play{grid-column:2;grid-row:1/span 2;font:700 18px/1 var(--display);color:var(--gold-ink);background:var(--gold);padding:12px 20px;border-radius:4px;text-decoration:none;white-space:nowrap}
+.play:hover{filter:brightness(1.1)}.play:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+footer{margin-top:28px;color:var(--dim);font-size:14px;display:grid;gap:6px}
+@media (max-width:480px){.build{grid-template-columns:1fr}.play{grid-column:1;grid-row:auto;justify-self:start}}
+</style>
+<main>
+<header><h1>Проклятые Глубины</h1>
+<p>Тестовые сборки браузерной ARPG. Выбирай версию и играй прямо здесь, ничего устанавливать не нужно.</p></header>
+<ul>
+<li class="build main">
+  <div class="meta"><h2>Основная версия</h2><span class="date">1 октября · 72eb029</span></div>
+  <p class="note">Новое: луки и самострел, заклинатели, пролог «Гиблый берег» с обучением, новое древо пассивов, Святогор. Тестовые персонажи 80 ур. — «Новый персонаж», строка под классами.</p>
+  <a class="play" href="b/master.html">Играть</a>
+</li>
+</ul>
+<footer><span>«Новый персонаж» начинает с обучения. Управление: ЛКМ — идти и атаковать, ПКМ — умение оружия, Q и E — умения,
+пробел — перекат, K — умения и руны, I — инвентарь, Alt — подписи предметов.</span>
+<span>С телефона: держите его горизонтально. Слева стик движения, справа кнопки атаки, оружия, двух умений и переката (цель выбирается сама,
+потяните кнопку — ударите в ту сторону), касание мира — подобрать или идти, ☰ — окна, долгое нажатие — как правый клик.</span>
+<span>У каждой сборки свои сохранения, они хранятся в этом браузере.</span></footer>
+</main>
+
+</html>
